@@ -1,6 +1,5 @@
-**Wiki: __Help Por Reação__**
-**Código: **
-```
+Código:
+
 bot.command({
   name: "TesteN3",
   code: `
@@ -29,10 +28,13 @@ bot.awaitedCommand({
   code: ` $editMessage[$message[1];{description:
 Clear.....
 }{color:ef00ff}{footer:Me Adicione em Seu Servidor!}{thumbnail:$userAvatar[$mentioned[1;yes]]}] `})
-```
 
-**Código Exemplo:**
-```
+
+
+Código Exemplo Use >testeN3 no Lab da N3xt:
+
+
+
 bot.command({
   name: "TesteN3",
   code: `
@@ -61,4 +63,3 @@ bot.awaitedCommand({
   code: ` $editMessage[$message[1];{description:
 Clear.....
 }{color:ef00ff}{footer:Me Adicione em Seu Servidor!}{thumbnail:$userAvatar[$mentioned[1;yes]]}] `})
-```
