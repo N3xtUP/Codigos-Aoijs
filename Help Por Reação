@@ -1,0 +1,64 @@
+**Wiki: __Help Por Reação__**
+**Código: **
+```
+bot.command({
+  name: "TesteN3",
+  code: `
+$reactionCollector[$splitText[1];$authorID;3m;emoji1,emoji2;categoria1,categoria2;yes]
+$textSplit[$sendMessage[{color: ef00ff}{title: Teste Painel Ajuda}{description:
+<:ART_Certo:838219587224862770> ** Comandos de Moderação**
+<:ART_Seta:838219579892826112> ** Voltar**
+
+}{footer:Me Adicione em Seu Servidor! | Pedido por $username!}{thumbnail:$userAvatar[$mentioned[1;yes]]};yes]; ]
+`
+})
+
+bot.awaitedCommand({
+  name: "categoria1",
+  code: `
+$editMessage[$message[1];{color: ef00ff}{title: Teste Painel Ajuda}{description:
+<:ART_Certo:838219587224862770> ** Comandos de Moderação**
+<:ART_Seta:838219579892826112> ** Voltar**
+
+}{footer:Me Adicione em Seu Servidor! | Pedido por $username!}{thumbnail:$userAvatar[$mentioned[1;yes]]}]
+`
+})
+
+bot.awaitedCommand({
+  name: "categoria2",
+  code: ` $editMessage[$message[1];{description:
+Clear.....
+}{color:ef00ff}{footer:Me Adicione em Seu Servidor!}{thumbnail:$userAvatar[$mentioned[1;yes]]}] `})
+```
+
+**Código Exemplo:**
+```
+bot.command({
+  name: "TesteN3",
+  code: `
+$reactionCollector[$splitText[1];$authorID;3m;<:ART_Certo:838219587224862770>,<:ART_Seta:838219579892826112>;mod,volt;yes]
+$textSplit[$sendMessage[{color: ef00ff}{title: Teste Painel Ajuda}{description:
+<:ART_Certo:838219587224862770> ** Comandos de Moderação**
+<:ART_Seta:838219579892826112> ** Voltar**
+
+}{footer:Me Adicione em Seu Servidor! | Pedido por $username!}{thumbnail:$userAvatar[$mentioned[1;yes]]};yes]; ]
+`
+})
+
+bot.awaitedCommand({
+  name: "volt",
+  code: `
+$editMessage[$message[1];{color: ef00ff}{title: Teste Painel Ajuda}{description:
+<:ART_Certo:838219587224862770> ** Comandos de Moderação**
+<:ART_Seta:838219579892826112> ** Voltar**
+
+}{footer:Me Adicione em Seu Servidor! | Pedido por $username!}{thumbnail:$userAvatar[$mentioned[1;yes]]}]
+`
+})
+
+bot.awaitedCommand({
+  name: "mod",
+  code: ` $editMessage[$message[1];{description:
+Clear.....
+}{color:ef00ff}{footer:Me Adicione em Seu Servidor!}{thumbnail:$userAvatar[$mentioned[1;yes]]}] `})
+```
